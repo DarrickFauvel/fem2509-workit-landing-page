@@ -1,0 +1,91 @@
+:root {
+  --color-white: #ffffff;
+  --color-mint: #44ffa1;
+  --bg-color-indigo: var(--color-indigo-05);
+  --text-white: var(--color-white);
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  opacity: 0;
+
+  .ready {
+    opacity: 1;
+    transition: 0.25s opacity;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Utilities */
+.underline-mint {
+  text-decoration: underline;
+  text-decoration-color: var(--color-mint);
+  text-decoration-thickness: 3px;
+}
+
+.bg-indigo-color-wrapper {
+  background-color: var(--bg-color-indigo);
+}
+.bg-white-wrapper {
+  background-color: var(--color-white);
+}
+
+/* Page elements */
+.page-header {
+  background-color: var(--color-indigo-05);
+  padding-bottom: 0.1em;
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: calc((32 / 16) * 1em);
+
+    .action-link {
+      color: var(--text-white);
+      font-size: calc((18 / 16) * 1rem);
+      font-weight: var(--font-weight-bold);
+      text-underline-offset: 0.4em;
+    }
+  }
+}
+
+.page-main {
+  .hero {
+    color: var(--text-white);
+    text-align: center;
+
+    .hero-content {
+      background-color: var(--bg-color-indigo);
+      padding-top: calc((56 / 16) * 1em);
+
+      h1 {
+        margin-block-start: 0;
+        font-size: calc((48 / 16) * 1rem);
+        text-underline-offset: 0.18em;
+        text-align: center;
+        line-height: 110%;
+      }
+    }
+
+    .hero-illustration {
+    }
+  }
+}
+
+.rounded-edge {
+  height: 200px;
+  width: 100%;
+  aspect-ratio: 3/2;
+  clip-path: ellipse(85% 100% at 50% 0);
+  background: var(--bg-color-indigo);
+}
