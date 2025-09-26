@@ -1,7 +1,10 @@
 const template = document.createElement("template");
 template.innerHTML = /*html*/ `<style>
+    :host {
+      display: block;
+    }
     button {
-      border: none;
+      border: 2px solid var(--color-mint);
       background-color: var(--color-mint);
       padding-inline: calc((32 / 16) * 1em);
       padding-block: calc((12 / 16) * 1em);
@@ -9,11 +12,12 @@ template.innerHTML = /*html*/ `<style>
       line-height: 180%;
       font-weight: var(--font-weight-bold);
       cursor: pointer;
-      transition: filter .3s, transform .3s;
+      transition: all .4s;
     }
     button:hover {
-     filter: brightness(0.8);
-     transform: translateY(-3px);
+      border: 2px solid var(--color-mint);
+      background-color: 1px solid var(--color-indigo);
+      color: var(--color-mint);
     }
   </style>
   <button>
