@@ -67,6 +67,7 @@ h3 {
     .hero-content {
       background-color: var(--bg-color-indigo);
       padding-top: calc((56 / 16) * 1em);
+      padding-bottom: calc((64 / 16) * 1em);
 
       h1 {
         margin-block-start: 0;
@@ -78,14 +79,24 @@ h3 {
     }
 
     .hero-illustration {
+      position: relative;
+      padding-bottom: 4em;
+    }
+
+    .rounded-edge {
+      height: 200px;
+      width: 100%;
+      aspect-ratio: 3/2;
+      clip-path: ellipse(85% 100% at 50% 0);
+      background: var(--bg-color-indigo);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      width: 80%;
     }
   }
-}
-
-.rounded-edge {
-  height: 200px;
-  width: 100%;
-  aspect-ratio: 3/2;
-  clip-path: ellipse(85% 100% at 50% 0);
-  background: var(--bg-color-indigo);
 }
