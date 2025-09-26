@@ -1,7 +1,8 @@
 :root {
   --color-white: #ffffff;
   --color-mint: #44ffa1;
-  --bg-color-indigo: var(--color-indigo-05);
+  --color-indigo: var(--color-indigo-05);
+  --bg-color-indigo: var(--color-indigo);
   --text-white: var(--color-white);
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
