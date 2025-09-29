@@ -6,6 +6,9 @@
   --text-white: var(--color-white);
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-family-display: "Fraunces", serif;
+}
+
 }
 
 body {
