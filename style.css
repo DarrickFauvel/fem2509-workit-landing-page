@@ -9,6 +9,14 @@
   --font-family-display: "Fraunces", serif;
 }
 
+html {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 body {
