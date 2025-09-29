@@ -21,16 +21,6 @@
     </script>
     <!-- END: FOUCE fix -->
 
-    <!-- Load Kelp UI -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/kelpui@1/css/kelp.css"
-    />
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/kelpui@1/js/kelp.js"
-    ></script>
-
     <!-- Load fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,7 +45,7 @@
     <main class="page-main">
       <section class="hero">
         <div class="hero-content">
-          <h1 class="container-sm">
+          <h1>
             Data <span class="underline-mint">tailored</span> to your needs.
           </h1>
           <wc-button>
@@ -69,55 +59,32 @@
         </div>
       </section>
 
-      <section class="features">
-        <wc-feature>
-          <div>1</div>
-          <h2>Actionable insights</h2>
+      <section class="features container-sm">
+        <!-- Feature list web component -->
+        <wc-feature-list></wc-feature-list>
+      </section>
+
+      <section class="cta container-sm">
+        <div class="headshot"></div>
+        <div class="content">
+          <h2>Be the first to test</h2>
           <p>
-            Optimize your products, improve customer satisfaction and stay ahead
-            of the competition with our product data analytics.
+            Hi, I'm Louis Graham, the founder of the company. Book a demo call
+            with me to become a beta tester for our app and kickstart your
+            company. Apply for access below and I’ll be in touch to schedule a
+            call.
           </p>
-        </wc-feature>
+          <wc-button>
+            <span slot="content">Apply for access</span>
+          </wc-button>
+        </div>
       </section>
     </main>
 
     <footer></footer>
 
-    <!-- 
-    
-  
-  1
-
-  Actionable insights
-  
-  Optimize your products, improve customer satisfaction and stay ahead of the competition 
-  with our product data analytics.
-
-  2
-
-  Data-driven decisions
-
-  Make data-driven decisions with our product data analytics. Our AI-generated reports help 
-  you unlock insights hidden in your product data.
-
-  3
-
-  Always affordable
-
-  Always affordable pricing that scales with your business. Get top-quality product data 
-  analytics services without hidden costs or unexpected fees.
-
-  Be the first to test
-
-  Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
-  beta tester for our app and kickstart your company. Apply for access below and I’ll be 
-  in touch to schedule a call.
-
-  Apply for access
-    -->
-
     <!-- Load web components -->
     <script src="./components/wc-button.js"></script>
-    <script src="./components/wc-feature.js"></script>
+    <script type="module" src="./components/wc-feature-list.js"></script>
   </body>
 </html>
