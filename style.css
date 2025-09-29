@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   font-family: "Manrope", sans-serif;
   opacity: 0;
 
