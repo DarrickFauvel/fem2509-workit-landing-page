@@ -38,6 +38,11 @@ h3 {
 }
 
 /* Utilities */
+.container-sm {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .underline-mint {
   text-decoration: underline;
   text-decoration-color: var(--color-mint);
