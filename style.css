@@ -58,7 +58,7 @@ h3 {
 
 /* Page elements */
 .page-header {
-  background-color: var(--color-indigo-05);
+  background-color: var(--color-indigo);
   padding-bottom: 0.1em;
 
   .header-nav {
