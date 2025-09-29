@@ -72,6 +72,10 @@ h3 {
       font-size: calc((18 / 16) * 1rem);
       font-weight: var(--font-weight-bold);
       text-underline-offset: 0.4em;
+      transition: color 0.3s ease;
+    }
+    .action-link:hover {
+      color: var(--color-mint);
     }
   }
 }
