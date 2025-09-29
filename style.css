@@ -120,4 +120,22 @@ h3 {
       width: 80%;
     }
   }
+
+  .cta {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: calc((32 / 16) * 1em);
+      background-color: var(--bg-color-indigo);
+      color: var(--text-white);
+      line-height: 180%;
+      padding: calc((32 / 16) * 1em);
+    }
+  }
 }
+
+/* wc-feature {
+  display: block;
+} */
