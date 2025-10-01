@@ -21,7 +21,10 @@
       }
     </style>
     <script type="module">
-      await Promise.allSettled([customElements.whenDefined("wc-button")]);
+      await Promise.allSettled([
+        customElements.whenDefined("wc-button"),
+        customElements.whenDefined("wc-feature-list"),
+      ]);
       document.body.classList.add("ready");
     </script>
     <!-- END: FOUCE fix -->
