@@ -86,6 +86,9 @@ h3 {
     text-align: center;
 
     .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
       background-color: var(--bg-color-indigo);
       padding-top: calc((56 / 16) * 1em);
       padding-bottom: calc((64 / 16) * 1em);
@@ -96,6 +99,7 @@ h3 {
         text-underline-offset: 0.18em;
         text-align: center;
         line-height: 110%;
+        text-wrap: pretty;
       }
     }
 
