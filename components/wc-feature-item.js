@@ -6,7 +6,6 @@ class WcFeatureItem extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("wc-feature-item connected");
     const children = this.innerHTML;
 
     // Only insert template if not already rendered
@@ -16,7 +15,7 @@ class WcFeatureItem extends HTMLElement {
           <style>
             wc-feature-item {
               display: block;
-              
+ 
               article {
                 display: flex;
                 flex-direction: column;
@@ -43,8 +42,19 @@ class WcFeatureItem extends HTMLElement {
                 }
               }
             }
+            
+            @keyframes fade-in-up {
+              from {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
           </style>
-          <article>
+          <article class="observed-element">
             ${children}
           </article>
         </template>`;
