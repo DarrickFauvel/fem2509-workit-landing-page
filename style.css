@@ -56,6 +56,18 @@ h3 {
   background-color: var(--color-white);
 }
 
+/* Animate on intersection observation */
+.observed-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.observed-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Page elements */
 .page-header {
   background-color: var(--color-indigo);

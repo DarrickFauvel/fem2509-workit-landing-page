@@ -27,7 +27,6 @@ class WcFeatureList extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("wc-feature-list connected");
     const style = /*html*/ `<style>
     wc-feature-list {
         display: flex;

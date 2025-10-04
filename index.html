@@ -38,6 +38,7 @@
     />
     <!-- END: Load fonts -->
 
+    <script type="module" src="./main.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Workit landing page</title>
   </head>
@@ -73,7 +74,7 @@
         <wc-feature-list></wc-feature-list>
       </section>
 
-      <section class="cta container-sm">
+      <section class="cta container-sm observed-element">
         <div class="headshot"></div>
         <div class="content">
           <h2>Be the first to test</h2>
@@ -90,7 +91,9 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div style="height: 200px"></div>
+    </footer>
 
     <!-- Load web components -->
     <script src="./components/wc-button.js"></script>
