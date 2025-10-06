@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="reduce-fouce" lang="en">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -10,24 +10,24 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- START: FOUCE fix - fade in body -->
+    <!-- START: reduce fouce -->
     <style>
-      body {
+      html.reduce-fouce {
         opacity: 0;
-      }
-      body.ready {
-        opacity: 1;
-        transition: 0.25s opacity;
       }
     </style>
     <script type="module">
-      await Promise.allSettled([
-        customElements.whenDefined("wc-button"),
-        customElements.whenDefined("wc-feature-list"),
+      await Promise.race([
+        Promise.allSettled([
+          customElements.whenDefined("wc-button"),
+          customElements.whenDefined("wc-feature-item"),
+          customElements.whenDefined("wc-feature-list"),
+        ]),
+        new Promise((resolve) => setTimeout(resolve, 2000)),
       ]);
-      document.body.classList.add("ready");
+      document.documentElement.classList.remove("reduce-fouce");
     </script>
-    <!-- END: FOUCE fix -->
+    <!-- END: reduce fouce -->
 
     <!-- START: Load fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
