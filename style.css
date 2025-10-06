@@ -22,12 +22,6 @@ html {
 body {
   background-color: var(--color-white);
   font-family: "Manrope", sans-serif;
-  opacity: 0;
-
-  .ready {
-    opacity: 1;
-    transition: 0.25s opacity;
-  }
 }
 
 h1,
@@ -146,7 +140,7 @@ img {
 
     .headshot {
       position: absolute;
-      padding-inline: 5%;
+      padding-inline: 10%;
     }
     .content {
       position: absolute;
