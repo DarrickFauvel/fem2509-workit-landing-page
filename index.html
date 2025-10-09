@@ -10,24 +10,12 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- START: reduce fouce -->
+    <!-- Reduce FOUCE by hiding initial page render -->
     <style>
       html.reduce-fouce {
         opacity: 0;
       }
     </style>
-    <script type="module">
-      await Promise.race([
-        Promise.allSettled([
-          customElements.whenDefined("wc-button"),
-          customElements.whenDefined("wc-feature-item"),
-          customElements.whenDefined("wc-feature-list"),
-        ]),
-        new Promise((resolve) => setTimeout(resolve, 2000)),
-      ]);
-      document.documentElement.classList.remove("reduce-fouce");
-    </script>
-    <!-- END: reduce fouce -->
 
     <!-- START: Load fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +26,12 @@
     />
     <!-- END: Load fonts -->
 
+    <!-- Load module first to reduce FOUCE -->
+    <script type="module" src="./js/init-wc.js"></script>
+
+    <!-- Load module second -->
     <script type="module" src="./main.js"></script>
+
     <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Workit landing page</title>
   </head>

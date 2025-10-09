@@ -1,5 +1,10 @@
+/**
+ * Template for the <wc-button> web component.
+ * @type {HTMLTemplateElement}
+ */
 const template = document.createElement("template");
-template.innerHTML = /*html*/ `<style>
+
+template.innerHTML = /* html */ `<style>
     :host {
       display: block;
     }
@@ -12,7 +17,7 @@ template.innerHTML = /*html*/ `<style>
       line-height: 180%;
       font-weight: var(--font-weight-bold);
       cursor: pointer;
-      transition: all .4s;
+      transition: all 0.4s;
     }
     button:hover {
       border: 2px solid var(--color-mint);
@@ -22,23 +27,59 @@ template.innerHTML = /*html*/ `<style>
   </style>
   <button>
     <slot name="content"></slot>
-  </button>
-`;
+  </button> `;
 
+/**
+ *  Custom web component that extends HTMLElement
+ * @extends {HTMLElement}
+ */
 class WcButton extends HTMLElement {
+  /**
+   * Creates a new instance of WcButton and attaches a shadow root.
+   * @constructor
+   */
   constructor() {
     super();
+
+    /** @type {ShadowRoot} */
     this.attachShadow({ mode: "open" });
+
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+    /** @type {HTMLButtonElement | null} */
+    this.btnEl = null;
   }
 
+  /**
+   * Lifecycle method called when the component is added to the DOM.
+   * Sets up the click event listener.
+   * @returns {void}
+   */
   connectedCallback() {
     const btnEl = this.shadowRoot.querySelector("button");
-    btnEl.addEventListener("click", this.handleClick);
+    if (this.btnEl) {
+      btnEl.addEventListener("click", this.handleClick);
+    }
   }
 
+  /**
+   * Handles button click events.
+   * @param {MouseEvent} e - The click event.
+   * @returns {void}
+   */
   handleClick(e) {
     console.log("button clicked");
+  }
+
+  /**
+   * Lifecycle method called when the component is removed from the DOM.
+   * Cleans up event listeners.
+   * @returns {void}
+   */
+  disconnectedCallback() {
+    if (this.btnEl) {
+      this.btnEl.removeEventListener("click", this.handleClick);
+    }
   }
 }
 
