@@ -16,4 +16,5 @@
 .prettierignore
 
 # Avoid upload of client asset files
-_client-assets
+/node_modules
+/_client-assets
