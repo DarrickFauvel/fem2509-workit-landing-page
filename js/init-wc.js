@@ -10,6 +10,7 @@
       customElements.whenDefined("wc-button"),
       customElements.whenDefined("wc-feature-item"),
       customElements.whenDefined("wc-feature-list"),
+      customElements.whenDefined("wc-icon-link"),
     ]),
     new Promise((resolve) => setTimeout(resolve, 2000)),
   ]);
