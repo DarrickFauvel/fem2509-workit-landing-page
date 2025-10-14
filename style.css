@@ -163,7 +163,6 @@ img {
 }
 
 .page-footer {
-  position: relative;
   display: block;
   padding-bottom: calc((80 / 16) * 1em);
   .stack {
