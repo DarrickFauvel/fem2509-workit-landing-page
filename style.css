@@ -24,6 +24,7 @@ html {
 body {
   background-color: var(--color-white);
   font-family: "Manrope", sans-serif;
+  height: 100dvh;
 }
 
 h1,
@@ -162,7 +163,6 @@ img {
 }
 
 .page-footer {
-  position: relative;
   display: block;
   padding-bottom: calc((80 / 16) * 1em);
   .stack {

@@ -1,3 +1,5 @@
+import { showToast } from "./wc-toast-message.js";
+
 /**
  * Template for the <wc-button> web component.
  * @type {HTMLTemplateElement}
@@ -57,9 +59,7 @@ class WcButton extends HTMLElement {
    */
   connectedCallback() {
     const btnEl = this.shadowRoot.querySelector("button");
-    if (this.btnEl) {
-      btnEl.addEventListener("click", this.handleClick);
-    }
+    btnEl.addEventListener("click", this.handleClick);
   }
 
   /**
@@ -68,7 +68,7 @@ class WcButton extends HTMLElement {
    * @returns {void}
    */
   handleClick(e) {
-    console.log("button clicked");
+    showToast("Saved successfully!", "success");
   }
 
   /**
